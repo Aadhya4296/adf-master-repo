@@ -1,0 +1,15 @@
+{
+	"name": "dev-data-fac-sri",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6b120ec5-10de-481c-b38f-e28f7bb716e1",
+		"tenantId": "4a925a3a-b010-41f5-9d7e-f43b70857610"
+	}
+}

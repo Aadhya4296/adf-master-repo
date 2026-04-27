@@ -1,0 +1,17 @@
+{
+	"name": "la_trg_db_aqi",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "database-server-sri.database.windows.net",
+			"database": "database-dev-sri",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "srilekha4296",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY5MzUzMTMxLUYzNEYtNDM2My04NDlFLTQ3OEQ2QTdEQUU3OF9mMGE1MDk1Yi01NmE1LTQyYzgtODJkMi1iMzcxM2Y5MTE0ZmMiDQp9"
+		}
+	}
+}
