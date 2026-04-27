@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dev-data-fac-sri"
+		},
+		"la_trg_aqi_air_quality_all_accountKey": {
+			"value": ""
+		},
+		"la_trg_db_aqi_password": {
+			"value": ""
+		},
+		"ls_src_aqi_air_quality_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_air_quality_all_accountKey": {
+			"value": ""
+		},
+		"ls_src_aqi_all_if_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_air_quality_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_all_if_accountKey": {
+			"value": ""
+		},
+		"ls_trg_aqi_csv_accountKey": {
+			"value": ""
+		},
+		"la_trg_aqi_air_quality_all_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"la_trg_db_aqi_properties_typeProperties_server": {
+			"value": "database-server-sri.database.windows.net"
+		},
+		"la_trg_db_aqi_properties_typeProperties_database": {
+			"value": "database-dev-sri"
+		},
+		"la_trg_db_aqi_properties_typeProperties_userName": {
+			"value": "srilekha4296"
+		},
+		"ls_src_aqi_air_quality_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_air_quality_all_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_all_if_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_all_if_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_csv_properties_typeProperties_url": {
+			"value": "https://storagedev1sri.dfs.core.windows.net/"
+		}
+	}
+}

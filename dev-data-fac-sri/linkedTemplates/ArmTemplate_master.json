@@ -1,0 +1,188 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dev-data-fac-sri"
+		},
+		"la_trg_aqi_air_quality_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'la_trg_aqi_air_quality_all'"
+		},
+		"la_trg_db_aqi_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'la_trg_db_aqi'"
+		},
+		"ls_src_aqi_air_quality_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_air_quality'"
+		},
+		"ls_src_aqi_air_quality_all_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_air_quality_all'"
+		},
+		"ls_src_aqi_all_if_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_src_aqi_all_if'"
+		},
+		"ls_trg_aqi_air_quality_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_air_quality'"
+		},
+		"ls_trg_aqi_all_if_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_all_if'"
+		},
+		"ls_trg_aqi_csv_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_trg_aqi_csv'"
+		},
+		"la_trg_aqi_air_quality_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"la_trg_db_aqi_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "database-server-sri.database.windows.net"
+		},
+		"la_trg_db_aqi_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "database-dev-sri"
+		},
+		"la_trg_db_aqi_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srilekha4296"
+		},
+		"ls_src_aqi_air_quality_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_air_quality_all_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_src_aqi_all_if_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_all_if_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"ls_trg_aqi_csv_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagedev1sri.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dev-data-fac-sri_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"la_trg_aqi_air_quality_all_accountKey": {
+						"value": "[parameters('la_trg_aqi_air_quality_all_accountKey')]"
+					},
+					"la_trg_db_aqi_password": {
+						"value": "[parameters('la_trg_db_aqi_password')]"
+					},
+					"ls_src_aqi_air_quality_accountKey": {
+						"value": "[parameters('ls_src_aqi_air_quality_accountKey')]"
+					},
+					"ls_src_aqi_air_quality_all_accountKey": {
+						"value": "[parameters('ls_src_aqi_air_quality_all_accountKey')]"
+					},
+					"ls_src_aqi_all_if_accountKey": {
+						"value": "[parameters('ls_src_aqi_all_if_accountKey')]"
+					},
+					"ls_trg_aqi_air_quality_accountKey": {
+						"value": "[parameters('ls_trg_aqi_air_quality_accountKey')]"
+					},
+					"ls_trg_aqi_all_if_accountKey": {
+						"value": "[parameters('ls_trg_aqi_all_if_accountKey')]"
+					},
+					"ls_trg_aqi_csv_accountKey": {
+						"value": "[parameters('ls_trg_aqi_csv_accountKey')]"
+					},
+					"la_trg_aqi_air_quality_all_properties_typeProperties_url": {
+						"value": "[parameters('la_trg_aqi_air_quality_all_properties_typeProperties_url')]"
+					},
+					"la_trg_db_aqi_properties_typeProperties_server": {
+						"value": "[parameters('la_trg_db_aqi_properties_typeProperties_server')]"
+					},
+					"la_trg_db_aqi_properties_typeProperties_database": {
+						"value": "[parameters('la_trg_db_aqi_properties_typeProperties_database')]"
+					},
+					"la_trg_db_aqi_properties_typeProperties_userName": {
+						"value": "[parameters('la_trg_db_aqi_properties_typeProperties_userName')]"
+					},
+					"ls_src_aqi_air_quality_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_air_quality_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_air_quality_all_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_air_quality_all_properties_typeProperties_url')]"
+					},
+					"ls_src_aqi_all_if_properties_typeProperties_url": {
+						"value": "[parameters('ls_src_aqi_all_if_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_air_quality_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_air_quality_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_all_if_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_all_if_properties_typeProperties_url')]"
+					},
+					"ls_trg_aqi_csv_properties_typeProperties_url": {
+						"value": "[parameters('ls_trg_aqi_csv_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "dev-data-fac-sri_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dev-data-fac-sri_ArmTemplate_0')]"
+			]
+		}
+	]
+}
